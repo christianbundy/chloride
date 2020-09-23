@@ -16,6 +16,10 @@ const adapt = (na) => {
     return secret
   };
 
+  api.ready = new Promise((resolve) => {
+    na.crypto_generichash_ready(resolve)
+  })
+
   return api
 }
 
